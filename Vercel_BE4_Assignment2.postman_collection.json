@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "c078ad38-37a0-44ef-bd40-c6f93eb77985",
+		"name": "Vercel_BE4_Assignment2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8297172",
+		"_collection_link": "https://orange-meadow-376121.postman.co/workspace/LearnAPITesting~a02bb063-6ac2-4e90-b218-c62ff3766fb7/collection/8297172-c078ad38-37a0-44ef-bd40-c6f93eb77985?action=share&source=collection_link&creator=8297172"
+	},
+	"item": [
+		{
+			"name": "addNewRecipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Classic Chocolate Chip Cookies\",\n    \"author\": \"Baker Betty\",\n    \"difficulty\": \"Easy\",\n    \"prepTime\": 15,\n    \"cookTime\": 10,\n    \"ingredients\": [\n        \"1 cup (2 sticks) unsalted butter, softened\",\n        \"3/4 cup granulated sugar\",\n        \"3/4 cup packed light brown sugar\",\n        \"1 teaspoon vanilla extract\",\n        \"2 large eggs\",\n        \"2 1/4 cups all-purpose flour\",\n        \"1 teaspoon baking soda\",\n        \"1/2 teaspoon salt\",\n        \"2 cups semisweet chocolate chips\"\n    ],\n    \"instructions\": [\n        \"Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper.\",\n        \"In a large bowl, cream together the butter, granulated sugar, and brown sugar until smooth.\",\n        \"Beat in the vanilla extract and eggs one at a time until well blended.\",\n        \"Combine the flour, baking soda, and salt; gradually stir into the creamed mixture.\",\n        \"Stir in the chocolate chips by hand using a wooden spoon.\",\n        \"Drop by rounded spoonfuls onto the prepared baking sheets.\",\n        \"Bake for 8 to 10 minutes in the preheated oven, or until edges are golden.\",\n        \"Allow cookies to cool on baking sheet for 5 minutes before transferring to a wire rack to cool completely.\"\n    ],\n    \"imageUrl\": \"https://example.com/classic_chocolate_chip_cookies.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllRecipes",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecipeByTitle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/Classic Chocolate Chip Cookies",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"Classic Chocolate Chip Cookies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecipesByAuthor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/authors/Sanjeev Kapoor",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"authors",
+						"Sanjeev Kapoor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRecipesByDifficulty",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/difficulty/Easy",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"difficulty",
+						"Easy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRecipeById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"difficulty\": \"Easy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/update/id/672cb7af6751035d5514d293",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"update",
+						"id",
+						"672cb7af6751035d5514d293"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateRecipeByTitle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"prepTime\": 40,\n    \"cookTime\": 45\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/update/title/Chicken Tikka Masala",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"update",
+						"title",
+						"Chicken Tikka Masala"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRecipeById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://be-4-assignment2-mu.vercel.app/recipes/delete/id/672cf493b2a2803e0c2e502d",
+					"protocol": "https",
+					"host": [
+						"be-4-assignment2-mu",
+						"vercel",
+						"app"
+					],
+					"path": [
+						"recipes",
+						"delete",
+						"id",
+						"672cf493b2a2803e0c2e502d"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
